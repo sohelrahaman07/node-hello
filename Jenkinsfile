@@ -28,7 +28,7 @@ stage ('Deployment')
     {
     steps
     {
-        sh "/var/lib/jenkins/workspace/NodeHelloJob ; sudo npm start  " 
+        sh "cd /var/lib/jenkins/workspace/NodeHelloJob ; sudo npm start  " 
     }
 }
   
