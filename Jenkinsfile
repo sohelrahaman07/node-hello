@@ -18,7 +18,7 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/node-hello ; sudo npm install " 
+       sh "/var/lib/jenkins/workspace/node-hello ; sudo npm install " 
     }
 }
 
@@ -27,7 +27,7 @@ stage ('Deployment')
     {
     steps
     {
-        sh "cd /home/ubuntu/workspace/node-hello ; sudo npm start  " 
+        sh "/var/lib/jenkins/workspace/node-hello; sudo npm start  " 
     }
 }
   
