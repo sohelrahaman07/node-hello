@@ -1,36 +1,13 @@
 pipeline {
-
-agent any
-
-stages {
-
-stage ('Checkout') 
-{
-steps
-    {
-    
-        checkout scm
-        
+  agent any
+ 
+  tools {nodejs "node"}
+ 
+  stages {
+    stage('Example') {
+      steps {
+        sh 'npm config ls'
+      }
     }
-    
-}
-stage ('Build') 
-{
-    steps
-    {
-       sh "/var/lib/jenkins/workspace/node-hello ; sudo npm install " 
-    }
-}
-
-   
-stage ('Deployment')
-    {
-    steps
-    {
-        sh "/var/lib/jenkins/workspace/node-hello; sudo npm start  " 
-    }
-}
-  
-
-}
+  }
 }
