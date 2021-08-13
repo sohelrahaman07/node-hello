@@ -1,6 +1,6 @@
 pipeline {
+
 agent any
-}
 
 stages {
 
@@ -32,4 +32,5 @@ stage ('Deployment')
 }
   
 
+}
 }
