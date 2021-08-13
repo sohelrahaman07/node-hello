@@ -1,6 +1,5 @@
 pipeline {
-agent {
-label 'Build-server'
+agent any
 }
 
 stages {
@@ -19,7 +18,7 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/MONOANGULARJOB ; sudo npm install " 
+       sh "cd /home/ubuntu/workspace/node-hello ; sudo npm install " 
     }
 }
 
@@ -28,7 +27,7 @@ stage ('Deployment')
     {
     steps
     {
-        sh "cd /home/ubuntu/workspace/MONOANGULARJOB ; sudo npm start  " 
+        sh "cd /home/ubuntu/workspace/node-hello ; sudo npm start  " 
     }
 }
   
