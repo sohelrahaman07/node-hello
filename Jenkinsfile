@@ -5,9 +5,9 @@ pipeline {
     
   stages {
         
-    stage('Checkout') {
+    stage('Git') {
       steps {
-        checkout scm
+        git 'https://github.com/sohelrahaman07/node-hello.git'
       }
     }
         
