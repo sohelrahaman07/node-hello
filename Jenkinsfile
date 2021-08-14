@@ -5,21 +5,21 @@ pipeline {
     
   stages {
         
-    stage('Cloning Git') {
+    stage('Checkout') {
       steps {
-        git 'https://github.com/sohelrahaman07/node-hello.git'
+        checkout scm
       }
     }
         
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        sh ' sudo npm install'
       }
     }
      
     stage('Deployment') {
       steps {
-         sh 'npm test'
+         sh 'sudo npm start '
       }
     }      
   }
