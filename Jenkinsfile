@@ -13,13 +13,13 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        sh ' sudo npm install'
+        sh 'npm install'
       }
     }
      
     stage('Deployment') {
       steps {
-         sh 'sudo npm start '
+         sh 'npm start '
       }
     }      
   }
